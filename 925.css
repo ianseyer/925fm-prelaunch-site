@@ -1,0 +1,168 @@
+:root {
+  --bg: #343D46;
+  --red: #bf616a;
+  --orange: #d08770;
+  --green: #a3be8c;
+  --yellow: #ebcb8b;
+  --cobalt: #8fa1b3;
+  --purple: #b48ead;
+  --turquoise: #96b5b4;
+  --lightgray: #a7adba;
+  --almostwhite: #eff1f5;
+  --form-bg: #2B333C;
+  --muted: #5e6973;
+}
+
+html, body, input, button {
+  font-family: input-mono, monospace;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+html, body {
+  background-color: var(--bg);
+  color: var(--lightgray);
+}
+
+p {
+  padding-bottom: 2em;
+}
+
+a, a:visited, a:hover {
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 1px solid var(--red);
+}
+
+a:hover {
+  background-color: var(--red);
+  color: var(--almostwhite);
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* title */
+.header {
+  text-align: right;
+  padding-bottom: 2em;
+}
+
+.title {
+  color: var(--turquoise);
+  font-size: 4.5em;
+  position: relative;
+  display: inline-block;
+  font-weight: 300;
+  letter-spacing: 6px;
+}
+
+.fm {
+  color: var(--yellow);
+}
+
+.title:before {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  top: 30px;
+  left: -90px;
+  background-color: var(--turquoise);
+  content: "";
+}
+
+/* lead */
+.lead {
+  text-align: right;
+  margin-bottom: 4em;
+}
+
+.lead strong {
+  color: var(--green);
+  font-weight: normal;
+}
+
+.lead p.emphasis {
+  color: var(--almostwhite);
+}
+
+form p {
+  padding: 0;
+}
+
+input {
+  padding: 1em 1.5em;
+  min-width: 300px;
+  text-align: right;
+  background-color: var(--form-bg);
+  border: none;
+  color: var(--almostwhite);
+}
+
+::placeholder {
+  color: var(--cobalt);
+}
+
+button {
+  color: var(--almostwhite);
+  background-color: var(--purple);
+  border: none;
+  padding: 1em 1.5em;
+}
+
+/* question styling */
+h2.faq-title {
+  color: var(--green);
+  font-weight: 300;
+}
+
+.question {
+  padding: 2rem 0;
+}
+
+.question h3 {
+  color: var(--yellow);
+  font-weight: normal;
+  font-size: 1.4rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+.question h3:before {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 8px;
+  left: -40px;
+  background-color: var(--yellow);
+  content: "";
+}
+
+/* footer */
+.footer {
+  padding: 2em 0;
+  text-align: center;
+  color: var(--muted)
+}
+
+.privacy {
+  font-size: 80%;
+}
+
+/* container for large screens */
+@media screen and (min-width: 700px) {
+  .container {
+    max-width: 800px;
+    padding-top: 200px;
+  }
+
+  .question {
+    padding-right: 20%;
+  }
+
+  .lead {
+    padding-left: 20%;
+  }
+}
