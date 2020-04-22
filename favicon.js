@@ -5,6 +5,7 @@
   if (!!context) {
     console.log('no canvas');
     var favicon = document.querySelector('link[rel*="icon"]');
+    draw();
     var drawTimeout = setInterval(draw, 1000);
   }
 
